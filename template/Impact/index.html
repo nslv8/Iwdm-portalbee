@@ -8,6 +8,10 @@
   <title>Portalbee.id</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
+  <!--ion icons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Favicons -->
   <link href="assets/img/portalbee-kecil.png" rel="icon">
@@ -48,9 +52,23 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="blog.html">Vidio Edukasi</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="#section1">About Us</a>
+            <ul class="sub-menu">
+              <li><a href="#about">Apa itu Portalbee?</a></li>
+              <li><a href="#about">Product & Services</a></li>
+              <li><a href="#FAQ">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">Courses</a></li>
+          <li><a href="#login">Login</a></li>
+          <form id="app" action="#">
+            <label :data-state="state" for="search">
+              <input type="text" placeholder="Search" @click="state = 'opan'" @blur="state='close'"/>
+              <i class="fa fa-search" @click="" aria-hidden="true"></i>
+            </label>
+            </form>
         </ul>
       </nav><!-- .navbar -->
 
@@ -69,7 +87,7 @@
           <h2>Welcome to <span>Portalbee</span></h2>
           <p>Lewati gerbang ini dan terbangkan usahamu setinggi angkasa!</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started">Mulai menjelajah</a>
+            <a href="#about" class="btn-get-started" style= "background-color: #25316D;" >Mulai menjelajah</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
@@ -113,30 +131,68 @@
                 <div class="position-relative mt-4">
                   <img src="assets/img/BrandNew/3784896.jpg" class="img-fluid rounded-4 mb-4" alt="">
                 </div>
-                
-                
               </div>
-            </div>
-            
-            <div class="benefit-portalbee content ps-0 ps-lg-5" style="text-align: justify;">
-              <center><h2>Apasih benefit jika bergabung portalbee?</h2></center>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> Anda dapat mencantumkan link toko secara gratis</li>
-                <li><i class="bi bi-check-circle-fill"></i> Pengunjung lebih mudah mencari toko anda</li>
-                <li><i class="bi bi-check-circle-fill"></i> Dapat mempromosikan hanya dengan menyebar link toko diportalbee</li>
-                <li><i class="bi bi-check-circle-fill"></i> Dukungan komunitas</li>
-                <li><i class="bi bi-check-circle-fill"></i> Dapat mengakses edukasi seputar UMKM secara gratis </li>
-              </ul>
-              <p>
-                Dapatkan semua benefit diatas hanya di portalbee.id
-              </p>
             </div>
           </div>
         </div>
       </div>
     </section><!-- End About Us Section -->
 
-   
+    <!-- FAQ Section -->
+    <section id="FAQ" class="FAQ" style="padding-top: 10px ;">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>FAQ</h2></div>
+      <div class="accordion">
+        <div class="accordion-item" id="pertanyaan1">
+          <a class="accordion-link" href="#pertanyaan1">Apa saja benefit yang didapatkan jika bergabung portalbee?
+          <i class="icon ion-md-chevron-down-outline"></i>
+          </a>
+            <div class="jawaban">
+              <p>
+              <i class="bi bi-check-circle-fill"></i> Anda dapat mencantumkan link toko secara gratis
+              <i class="bi bi-check-circle-fill"></i> Pengunjung lebih mudah mencari toko anda
+              <i class="bi bi-check-circle-fill"></i> Dapat mempromosikan hanya dengan menyebar link toko diportalbee
+              <i class="bi bi-check-circle-fill"></i> Dukungan komunitas
+              <i class="bi bi-check-circle-fill"></i> Dapat mengakses edukasi seputar UMKM secara gratis 
+              </p>
+            </div>
+        </div>
+        <div class="accordion-item" id="pertanyaan2">
+          <a class="accordion-link" href="#pertanyaan2">Apakah layanan link manajemen itu berbayar?
+          <i class="icon ion-md-chevron-down-outline"></i>
+          </a>
+            <div class="jawaban">
+              <p>
+              Layanan link manajemen dapat sobat akses secara gratis dengan memenuhi syarat & ketentuan yang berlaku
+              </p>
+            </div>
+        </div>
+        <div class="accordion-item" id="pertanyaan3">
+          <a class="accordion-link" href="#pertanyaan3">Apakah website Portalbee dapat di akses dari smartphone?
+          <i class="icon ion-md-chevron-down-outline"></i>
+          </a>
+            <div class="jawaban">
+              <p>
+              Website Portalbee dapat di akses dengan seluruh perangkat yang sobat punya kapanpun dan dimanapun sobat inginkan 
+              </p>
+            </div>
+        </div>
+        <div class="accordion-item" id="pertanyaan4">
+          <a class="accordion-link" href="#pertanyaan4">Bagaimana cara memulihkan akun yang lupa password?
+          <i class="icon ion-md-chevron-down-outline"></i>
+          </a>
+            <div class="jawaban">
+              <p>
+              Sobat masuk ke halaman login dan klik ”Forgot Your Password”, kemudian isi alamat email yang sobat daftarkan
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
     <!-- ======= Portfolio Section ======= -->
     <!-- <section id="portfolio" class="portfolio sections-bg">
       <div class="container" data-aos="fade-up">
