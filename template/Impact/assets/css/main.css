@@ -2629,7 +2629,7 @@ section {
 
 .blog .comments .reply-form input:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: rgba(0, 0, 116, 0.8);
 }
 
 .blog .comments .reply-form textarea {
@@ -2655,7 +2655,7 @@ section {
 }
 
 .blog .comments .reply-form .btn-primary:hover {
-  background-color: rgba(248, 90, 64, 0.8);
+  background-color: rgba(0, 0, 116, 0.8);
 }
 
 /*--------------------------------------------------------------
